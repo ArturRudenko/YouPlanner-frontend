@@ -1,9 +1,9 @@
 import { IBaseEntity } from '@/types/base.types';
 
 export enum EnumTaskPriority {
-	low = low,
-	medium = medium,
-	high = high
+	low = 'low',
+	medium = 'medium',
+	high = 'high'
 }
 
 export interface ITask extends IBaseEntity {
@@ -12,4 +12,4 @@ export interface ITask extends IBaseEntity {
 	isCompleted: boolean;
 }
 
-export type TaskFormStat = Partial<Omit<ITask, 'id' | 'updatedAt'>>;
+export type TaskFormState = Partial<Omit<ITask, 'id' | 'updatedAt'>>;
