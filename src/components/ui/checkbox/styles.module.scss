@@ -1,0 +1,49 @@
+.input {
+  @apply defaultCheckbox relative inline-flex h-[20px] min-h-[20px] w-[20px] min-w-[20px] appearance-none items-center justify-center rounded-md border border-gray-300 text-white/0 outline-none transition ease-linear checked:border-none checked:text-white hover:cursor-pointer dark:border-white/10
+
+  &Red {
+    @apply checked:border-none checked:bg-red-500 dark:checked:bg-red-400
+  }
+  &Blue {
+    @apply checked:border-none checked:bg-blue-500 dark:checked:bg-blue-400
+  }
+  &Green {
+    @apply checked:border-none checked:bg-green-500 dark:checked:bg-green-400
+  }
+  &Yellow {
+    @apply checked:border-none checked:bg-yellow-500 dark:checked:bg-yellow-400
+  }
+  &Orange {
+    @apply checked:border-none checked:bg-orange-500 dark:checked:bg-orange-400
+  }
+  &Teal {
+    @apply checked:border-none checked:bg-teal-500 dark:checked:bg-teal-400
+  }
+  &Navy {
+    @apply checked:border-none checked:bg-navy-500 dark:checked:bg-navy-400
+  }
+  &Lime {
+    @apply checked:border-none checked:bg-lime-500 dark:checked:bg-lime-400
+  }
+  &Cyan {
+    @apply checked:border-none checked:bg-cyan-500 dark:checked:bg-cyan-400
+  }
+  &Pink {
+    @apply checked:border-none checked:bg-pink-500 dark:checked:bg-pink-400
+  }
+  &Purple {
+    @apply checked:border-none checked:bg-purple-500 dark:checked:bg-purple-400
+  }
+  &Amber {
+    @apply checked:border-none checked:bg-amber-500 dark:checked:bg-amber-400
+  }
+  &Indigo {
+    @apply checked:border-none checked:bg-indigo-500 dark:checked:bg-indigo-400
+  }
+  &Gray {
+    @apply checked:border-none checked:bg-gray-500 dark:checked:bg-gray-400
+  }
+  &Default {
+    @apply checked:bg-brand-400 dark:checked:bg-brand-400
+  }
+}
