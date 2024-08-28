@@ -1,6 +1,7 @@
 import cn from 'clsx';
 
 import styles from './styles.module.scss';
+import { makeFirstLetterCapital } from '@/helpers';
 
 interface ICheckboxProps {
 	id?: string;
@@ -23,21 +24,18 @@ interface ICheckboxProps {
 	[x: string]: any;
 }
 
-export const Checkbox = ({ id, className, color, ...rest }: ICheckboxProps) => {
-	const getClassFromColor = (colorName: string | undefined): string =>
-		colorName
-			? `input${colorName.charAt(0).toUpperCase()}${colorName.slice(1)}`
-			: 'inputDefault';
-
-	return (
-		<input
-			id={id}
-			type='checkbox'
-			name='weekly'
-			className={cn(styles.input, styles[getClassFromColor(color)], className)}
-			{...rest}
-		/>
-	);
-};
+export const Checkbox = ({ id, className, color, ...rest }: ICheckboxProps) => (
+	<input
+		id={id}
+		type='checkbox'
+		name='weekly'
+		className={cn(
+			styles.input,
+			styles[`input${color ? makeFirstLetterCapital(color) : 'Default'}`],
+			className
+		)}
+		{...rest}
+	/>
+);
 
 export default Checkbox;

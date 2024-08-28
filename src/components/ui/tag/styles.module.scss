@@ -1,0 +1,16 @@
+.tag {
+  @apply rounded-lg w-max py-1 px-2 text-xs font-semibold text-sm text-white transition;
+
+  &Default {
+    @apply bg-gray-500/20;
+  }
+  &High {
+    @apply 'bg-red-400/60';
+  }
+  &Medium {
+    @apply 'bg-orange-400/70';
+  }
+  &Low {
+    @apply 'bg-blue-400/70';
+  }
+}

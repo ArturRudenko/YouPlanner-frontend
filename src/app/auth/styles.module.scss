@@ -2,10 +2,14 @@
   @apply flex min-h-screen;
 }
 
+.title {
+  @apply text-3xl font-medium pb-3 border-b-2 ;
+}
+
 .form {
   @apply w-1/4 m-auto shadow bg-sidebar rounded-xl p-layout;
 
-  &Content {
+  &Buttons {
     @apply flex items-center justify-center gap-5;
   }
 }

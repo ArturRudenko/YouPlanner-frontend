@@ -6,6 +6,9 @@ import { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 
+import Button from '@/components/ui/button/Button';
+import { Input } from '@/components/ui/input/Input';
+
 import { IAuthForm } from '@/types/auth.types';
 
 import { DASHBOARD_PAGES } from '@/config/pages-url.config';
@@ -41,8 +44,37 @@ export function Auth() {
 				className={styles.form}
 				onSubmit={handleSubmit(onSubmit)}
 			>
-				HEADING INPUTS
-				<div className={styles.formContent}>BUTTONS</div>
+				<h1 className={styles.title}>YouPlanner</h1>
+				<Input
+					id={'email'}
+					type='email'
+					label={'Email:'}
+					placeholder={'you@planner.com'}
+					{...register('email', {
+						required: 'Email is required',
+						pattern: {
+							value: /^[\w.@+-]+$/,
+							message: 'Wrong email format'
+						}
+					})}
+				/>
+				<Input
+					id={'password'}
+					type='password'
+					label={'Password:'}
+					placeholder={'enter password'}
+					{...register('password', {
+						required: 'Password is required',
+						minLength: {
+							value: 6,
+							message: 'Password must be at least 6 characters'
+						}
+					})}
+				/>
+				<div className={styles.formButtons}>
+					<Button onClick={() => setIsLoginFrom(true)}>Login</Button>
+					<Button onClick={() => setIsLoginFrom(false)}>Register</Button>
+				</div>
 			</form>
 		</div>
 	);

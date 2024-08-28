@@ -11,7 +11,7 @@ interface InputProps {
 	variant?: string;
 	state?: 'error' | 'success';
 	type?: string;
-	disabled: boolean;
+	disabled?: boolean;
 	isNumber?: boolean;
 }
 
