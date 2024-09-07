@@ -5,7 +5,7 @@ import styles from './input.module.scss';
 
 interface InputProps {
 	id: string;
-	label: string;
+	label?: string;
 	className?: string;
 	placeholder?: string;
 	variant?: string;
@@ -46,10 +46,14 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 
 		return (
 			<div className={className}>
-				<label
-					htmlFor={id}
-					className={styles.label}
-				></label>
+				{!!label && (
+					<label
+						htmlFor={id}
+						className={styles.label}
+					>
+						{label}
+					</label>
+				)}
 				<input
 					id={id}
 					ref={ref}
