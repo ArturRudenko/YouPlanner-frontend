@@ -3,7 +3,7 @@ import { CSSProperties, FC } from 'react';
 
 import { EnumTaskPriority } from '@/types/task.types';
 
-import styles from './styles.module.scss';
+import styles from './tag.module.scss';
 import { makeFirstLetterCapital } from '@/helpers';
 
 interface ITag {

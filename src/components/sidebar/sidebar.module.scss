@@ -1,0 +1,19 @@
+.sidebar {
+  @apply flex flex-col
+}
+
+.link {
+  @apply flex items-center gap-2.5 p-layout border-b border-b-border;
+
+  &Text {
+    @apply text-2xl font-bold relative;
+  }
+}
+
+.menu {
+  @apply p-3 relative;
+}
+
+.footer {
+  @apply mt-auto mb-4 text-xs opacity-40 font-normal text-center;
+}

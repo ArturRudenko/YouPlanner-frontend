@@ -1,7 +1,7 @@
 import cn from 'clsx';
 import { ButtonHTMLAttributes, FC, PropsWithChildren } from 'react';
 
-import styles from './styles.module.scss';
+import styles from './button.module.scss';
 
 const Button: FC<
 	PropsWithChildren<ButtonHTMLAttributes<HTMLButtonElement>>

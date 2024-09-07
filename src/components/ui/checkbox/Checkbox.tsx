@@ -1,6 +1,6 @@
 import cn from 'clsx';
 
-import styles from './styles.module.scss';
+import styles from './checkbox.module.scss';
 import { makeFirstLetterCapital } from '@/helpers';
 
 interface ICheckboxProps {

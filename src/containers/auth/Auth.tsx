@@ -2,7 +2,7 @@
 
 import { useMutation } from '@tanstack/react-query';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 
@@ -13,10 +13,10 @@ import { IAuthForm } from '@/types/auth.types';
 
 import { DASHBOARD_PAGES } from '@/config/pages-url.config';
 
-import styles from './styles.module.scss';
+import styles from './auth.module.scss';
 import authService from '@/services/auth.service';
 
-export function Auth() {
+export const Auth: FC = () => {
 	const [isLoginFrom, setIsLoginFrom] = useState(false);
 
 	const { register, handleSubmit, reset } = useForm<IAuthForm>({
@@ -29,7 +29,7 @@ export function Auth() {
 		mutationKey: ['auth'],
 		mutationFn: (data: IAuthForm) =>
 			authService.authorize(isLoginFrom ? 'login' : 'register', data),
-		onSuccess() {
+		onSuccess: () => {
 			toast.success('Authorized successfully!');
 			reset();
 			push(DASHBOARD_PAGES.HOME);
@@ -78,4 +78,4 @@ export function Auth() {
 			</form>
 		</div>
 	);
-}
+};

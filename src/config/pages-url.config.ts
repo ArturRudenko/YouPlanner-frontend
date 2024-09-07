@@ -1,6 +1,7 @@
 class DASHBOARD {
 	private root = '/app';
 
+	AUTH = '/auth';
 	HOME = this.root;
 	TASKS = `${this.root}/tasks`;
 	HABITS = `${this.root}/habits`;

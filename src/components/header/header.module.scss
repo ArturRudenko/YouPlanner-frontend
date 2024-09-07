@@ -1,0 +1,20 @@
+.container {
+  @apply absolute top-big-layout right-big-layout;
+}
+
+.user {
+  @apply flex items-center;
+
+  &Info {
+    @apply text-right mr-3;
+  }
+  &Name {
+    @apply font-bold -mb-1;
+  }
+  &Email {
+    @apply text-sm opacity-40;
+  }
+  &Avatar {
+    @apply w-10 h-10 flex justify-center items-center text-2xl text-white bg-white/20 rounded uppercase;
+  }
+}

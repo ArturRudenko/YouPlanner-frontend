@@ -1,7 +1,7 @@
 import cn from 'clsx';
 import { FC, KeyboardEvent, forwardRef } from 'react';
 
-import styles from './styles.module.scss';
+import styles from './input.module.scss';
 
 interface InputProps {
 	id: string;
