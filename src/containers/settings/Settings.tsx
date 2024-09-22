@@ -10,7 +10,7 @@ import { Input } from '@/components/ui/input/Input';
 
 import { UserFormData } from '@/types/auth.types';
 
-import useProfile from '@/hooks/useProfile';
+import useProfile from '@/hooks/auth/useProfile';
 
 import styles from './settings.module.scss';
 import userService from '@/services/user.service';

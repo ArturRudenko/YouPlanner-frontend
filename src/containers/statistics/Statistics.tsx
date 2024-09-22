@@ -4,7 +4,7 @@ import { FC } from 'react';
 
 import Loader from '@/components/ui/loader/Loader';
 
-import useProfile from '@/hooks/useProfile';
+import useProfile from '@/hooks/auth/useProfile';
 
 import styles from './statistics.module.scss';
 
