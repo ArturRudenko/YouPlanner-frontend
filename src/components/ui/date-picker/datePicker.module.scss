@@ -1,0 +1,21 @@
+.rdp {
+  --rdp-cell-size: 32px;
+  --rdp-caption-font-size: 17px;
+  --rdp-background-color: rgba(255, 255, 255, .2);
+  --rdp-accent-color: #7551FF;
+
+  font-size: 85%;
+  @apply m-1;
+}
+
+.wrapper {
+  @apply relative;
+}
+
+.icon {
+  @apply absolute -top-2 -right-4 opacity-30 hover:opacity-100 transition-opacity;
+}
+
+.picker {
+  @apply absolute p-2.5 slide bg-sidebar z-10 shadow rounded-lg;
+}
