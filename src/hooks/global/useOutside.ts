@@ -6,8 +6,8 @@ type HookReturn = {
 	setShow: Dispatch<SetStateAction<boolean>>;
 };
 
-export default function useOutside(isVisible: boolean): HookReturn {
-	const [show, setShow] = useState(isVisible);
+export default function useOutside(isVisibleByDefault: boolean): HookReturn {
+	const [show, setShow] = useState(isVisibleByDefault);
 	const ref = useRef<HTMLElement>(null);
 
 	const onClickOutside = (event: any) => {

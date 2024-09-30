@@ -6,6 +6,7 @@ class TaskService {
 	private BASE_URL = 'user/tasks';
 
 	async getTasks() {
+		//TODO add factory to divide tasks by columns on getter execution
 		return await axiosWithAuth.get<ITask[]>(this.BASE_URL);
 	}
 

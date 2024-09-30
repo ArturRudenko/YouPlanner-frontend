@@ -1,0 +1,32 @@
+.slide {
+  animation: slide_anim 0.5s;
+}
+
+@keyframes slide_anim {
+  from {
+    transform: translateX(50px);
+    opacity: 0.4;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.select {
+  @apply relative min-w-36;
+}
+
+.cleanBtn {
+  @apply absolute top-0 right-0 opacity-30 hover:opacity-100 transition-opacity;
+}
+
+.list {
+  &Wrapper {
+    @apply absolute w-full p-2.5 left-0 slide bg-sidebar z-10 shadow rounded-lg;
+  }
+  &Item {
+    @apply block mb-4 last:mb-0 capitalize rounded-lg;
+  }
+}

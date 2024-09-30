@@ -5,12 +5,12 @@
     @apply bg-gray-500/20;
   }
   &High {
-    @apply 'bg-red-400/60';
+    @apply bg-red-400/60;
   }
   &Medium {
-    @apply 'bg-orange-400/70';
+    @apply bg-orange-400/70;
   }
   &Low {
-    @apply 'bg-blue-400/70';
+    @apply bg-blue-400/70;
   }
 }

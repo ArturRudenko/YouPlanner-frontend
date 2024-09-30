@@ -8,6 +8,22 @@
   @apply m-1;
 }
 
+.slide {
+  animation: slide_anim 0.5s;
+}
+
+@keyframes slide_anim {
+  from {
+    transform: translateX(50px);
+    opacity: 0.4;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .wrapper {
   @apply relative;
 }

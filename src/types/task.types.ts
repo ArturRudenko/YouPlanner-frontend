@@ -13,3 +13,8 @@ export interface ITask extends IBaseEntity {
 }
 
 export type TaskFormState = Partial<Omit<ITask, 'id' | 'updatedAt'>>;
+
+export interface ITag {
+	label: string;
+	priority: EnumTaskPriority;
+}

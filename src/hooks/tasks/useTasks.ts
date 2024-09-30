@@ -11,11 +11,11 @@ export default function useTasks() {
 		queryFn: () => taskService.getTasks()
 	});
 
-	const [items, setItems] = useState<ITask[]>(data?.data || []);
+	const [tasks, setTasks] = useState<ITask[]>(data?.data || []);
 
 	useEffect(() => {
-		setItems(data?.data || []);
+		setTasks(data?.data || []);
 	}, [data?.data]);
 
-	return { items, setItems };
+	return { tasks, setTasks };
 }
